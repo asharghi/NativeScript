@@ -4,8 +4,9 @@
     </ActionBar>
   </Page.actionBar>
   <StackLayout class="p-20">
-    <ScrollView class="h-full">
+    <ScrollView scroll="{{ logSomething }}" class="h-full">
       <StackLayout>
+        <Button text="LOG" tap="{{ logSomething }}" class="btn btn-primary btn-view-demo" />
         <Button text="a11y" tap="{{ viewDemo }}" class="btn btn-primary btn-view-demo" />
         <Button text="box-shadow" tap="{{ viewDemo }}" class="btn btn-primary btn-view-demo" />
         <Button text="css-playground" tap="{{ viewDemo }}" class="btn btn-primary btn-view-demo" />

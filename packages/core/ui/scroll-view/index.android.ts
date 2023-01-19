@@ -111,6 +111,7 @@ export class ScrollView extends ScrollViewBase {
 
 	public initNativeView(): void {
 		super.initNativeView();
+		console.log('initNativeView');
 		if (this._androidViewId < 0) {
 			this._androidViewId = android.view.View.generateViewId();
 		}
@@ -119,6 +120,7 @@ export class ScrollView extends ScrollViewBase {
 	}
 
 	protected addNativeListener() {
+		console.log('addNativeListener');
 		if (!this.nativeViewProtected) {
 			return;
 		}

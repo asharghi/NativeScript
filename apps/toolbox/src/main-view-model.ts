@@ -6,4 +6,8 @@ export class HelloWorldModel extends Observable {
 			moduleName: `pages/${args.object.text}`,
 		});
 	}
+
+	logSomething(args) {
+		console.log('LOG SOMETHING');
+	}
 }

@@ -19,10 +19,12 @@ export abstract class ScrollViewBase extends ContentView implements ScrollViewDe
 	public addEventListener(arg: string, callback: any, thisArg?: any) {
 		super.addEventListener(arg, callback, thisArg);
 
-		if (arg === ScrollViewBase.scrollEvent && !this._addedScrollEvent) {
-			this._addedScrollEvent = true;
-			this.addNativeListener();
-		}
+		setTimeout(() => {
+			if (arg === ScrollViewBase.scrollEvent && !this._addedScrollEvent) {
+				this._addedScrollEvent = true;
+				this.addNativeListener();
+			}
+		}, 0);
 	}
 
 	public removeEventListener(arg: string, callback: any, thisArg?: any) {
